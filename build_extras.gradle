@@ -1,6 +1,6 @@
 repositories{
     jcenter()
-    maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+    maven { url "https://maven.aliyun.com/nexus/content/repositories/releases" }
 }
 dependencies {
     implementation('com.aliyun.ams:alicloud-android-ha-adapter:1.2.5.0-open@aar') {
