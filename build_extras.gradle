@@ -3,19 +3,19 @@ repositories{
     maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 }
 dependencies {
-    compile('com.aliyun.ams:alicloud-android-ha-adapter:1.2.5.0-open@aar') {
+    implementation('com.aliyun.ams:alicloud-android-ha-adapter:1.2.5.0-open@aar') {
         transitive=true
     }
-    compile('com.aliyun.ams:alicloud-android-apm:1.1.4.0-open@aar') {
+    implementation('com.aliyun.ams:alicloud-android-apm:1.1.4.0-open@aar') {
         transitive=true
     }
-    compile('com.aliyun.ams:alicloud-android-ha-crashreporter:2.1.0@aar') {
+    implementation('com.aliyun.ams:alicloud-android-ha-crashreporter:2.1.0@aar') {
         transitive=true
     }
-    compile('com.aliyun.ams:alicloud-android-tlog:1.1.8.0-open@aar') {
+    implementation('com.aliyun.ams:alicloud-android-tlog:1.1.8.0-open@aar') {
          transitive=true
     }
-    compile 'com.aliyun.ams:alicloud-android-man:1.2.7'
+    implementation 'com.aliyun.ams:alicloud-android-man:1.2.7'
 }
 android {
     packagingOptions {
