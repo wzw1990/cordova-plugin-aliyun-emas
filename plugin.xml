@@ -35,14 +35,18 @@
     <source-file src="src/ios/AliyunMobileAnalytics.m"/>
     <header-file src="src/ios/AliyunEMAS.h"/>
     <source-file src="src/ios/AliyunEMAS.m"/>
-    <pods-config ios-min-version="11.0" use-frameworks="true">
-      <source url="https://github.com/CocoaPods/Specs.git"/>
-      <source url="https://github.com/aliyun/aliyun-specs.git"/>
-    </pods-config>
-    <pod name="AlicloudAPM"/>
-    <pod name="AlicloudCrash"/>
-    <pod name="AlicloudTLog"/>
-    <pod name="AlicloudMANLight"/>
+    <podspec>
+      <config>
+        <source url="https://github.com/CocoaPods/Specs.git"/>
+        <source url="https://github.com/aliyun/aliyun-specs.git"/>
+      </config>
+      <pods use-frameworks="true">
+        <pod name="AlicloudAPM" spec="~> 1.1.1"/>
+        <pod name="AlicloudCrash" spec="~> 1.2.0"/>
+        <pod name="AlicloudTLog" spec="~> 1.0.1.2"/>
+        <pod name="AlicloudMANLight" spec="~> 1.1.0"/>
+      </pods>
+    </podspec>
     <resource-file src="src/ios/AliyunEmasServices-Info.plist"/>
   </platform>
   <platform name="android">
