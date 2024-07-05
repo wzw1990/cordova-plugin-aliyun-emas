@@ -9,7 +9,6 @@
   <js-module name="AliyunEMAS" src="www/AliyunEMAS.js">
     <clobbers target="AliyunEMAS"/>
   </js-module>
-  <dependency id="cordova-plugin-cocoapod-support"/>
   <platform name="ios">
     <hook src="scripts/before_prepare_ios.js" type="before_prepare"/>
     <!--插件安装时config.xml配置文件项目位置-->
