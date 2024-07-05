@@ -35,7 +35,7 @@
     <source-file src="src/ios/AliyunMobileAnalytics.m"/>
     <header-file src="src/ios/AliyunEMAS.h"/>
     <source-file src="src/ios/AliyunEMAS.m"/>
-    <pods-config ios-min-version="8.0" use-frameworks="true">
+    <pods-config ios-min-version="11.0" use-frameworks="true">
       <source url="https://github.com/CocoaPods/Specs.git"/>
       <source url="https://github.com/aliyun/aliyun-specs.git"/>
     </pods-config>
