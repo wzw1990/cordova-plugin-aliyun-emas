@@ -115,6 +115,9 @@ static AliyunInit *shareInstance = nil;
 函数会返回失败信息，成功无返回
 */
 - (void)autoStartAliyunAnalyticsWithAppVersion:(NSString *)appVersion channel:(NSString *)channel nick:(NSString *)nick resultBlock:(void (^)(BOOL result, NSString *))block {
+    if (shareInstance != nil) {
+        return;
+    }
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
 

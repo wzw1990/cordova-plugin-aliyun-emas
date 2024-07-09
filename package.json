@@ -1,10 +1,11 @@
 {
   "name": "@wzw1990/cordova-plugin-aliyun-emas-analytics",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "description": "自定义cordova插件",
   "cordova": {
-    "id": "cordova-plugin-aliyun-emas-analytics",
+    "id": "@wzw1990/cordova-plugin-aliyun-emas-analytics",
     "platforms": [
+      "android",
       "ios"
     ]
   },
