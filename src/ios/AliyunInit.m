@@ -40,6 +40,7 @@ static AliyunInit *shareInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shareInstance = [[super alloc]init];
+        [AlicloudHAProvider start];
     });
     return shareInstance;
 }
@@ -150,14 +151,6 @@ static AliyunInit *shareInstance = nil;
             [[AliyunMobileAnalytics shareInstance]autoInitManSdkWithDebug:debug];
             XRLog(@"-- mobile analytics");
         }
-    });
-
-    dispatch_group_notify(group, queue, ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            XRLog(@"-- start");
-            [AlicloudHAProvider start];
-            block(YES, @"success");
-        });
     });
 }
 
