@@ -152,7 +152,7 @@ static AliyunInit *shareInstance = nil;
         }
     });
     static dispatch_once_t aliHAOnceToken;
-    if (DISPATCH_EXPECT(aliHAOnceToken, ~0l) != ~0l) {
+    if (aliHAOnceToken != 0) {
         XRLog(@"-- 重复初始化");
         block(YES, @"success");
     }
