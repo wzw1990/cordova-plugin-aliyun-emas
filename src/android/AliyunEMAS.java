@@ -103,7 +103,7 @@ public class AliyunEMAS extends CordovaPlugin {
             String model = args.getString(0);// 配置model
             String message = args.getString(1);// 配置message
             //设置可上传日志级别，默认 e 级别
-            TLogService.updateLogLevel(TLogLevel.VERBOSE);
+            TLogService.updateLogLevel(TLogLevel.INFO);
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -116,7 +116,7 @@ public class AliyunEMAS extends CordovaPlugin {
             String model = args.getString(0);// 配置model
             String message = args.getString(1);// 配置message
             //设置可上传日志级别，默认 e 级别
-            TLogService.updateLogLevel(TLogLevel.VERBOSE);
+            TLogService.updateLogLevel(TLogLevel.INFO);
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -129,7 +129,7 @@ public class AliyunEMAS extends CordovaPlugin {
             String model = args.getString(0);// 配置model
             String message = args.getString(1);// 配置message
             //设置可上传日志级别，默认 e 级别
-            TLogService.updateLogLevel(TLogLevel.VERBOSE);
+            TLogService.updateLogLevel(TLogLevel.INFO);
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -142,7 +142,7 @@ public class AliyunEMAS extends CordovaPlugin {
             String model = args.getString(0);// 配置model
             String message = args.getString(1);// 配置message
             //设置可上传日志级别，默认 e 级别
-            TLogService.updateLogLevel(TLogLevel.VERBOSE);
+            TLogService.updateLogLevel(TLogLevel.INFO);
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
