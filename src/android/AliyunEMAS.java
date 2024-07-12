@@ -212,6 +212,30 @@ public class AliyunEMAS extends CordovaPlugin {
                 }
             });
             ret = true;
+        } else if (action.equals("uploadLog")) {
+            String comment = args.getString(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    TLogService.positiveUploadTlog(comment);
+                }
+            });
+        } else if (action.equals("updateLogLevel")) {
+            String level = args.getString(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (level.equals("debug")) {
+                        TLogService.updateLogLevel(TLogLevel.DEBUG);
+                    } else if (level.equals("info")) {
+                        TLogService.updateLogLevel(TLogLevel.INFO);
+                    } else if (level.equals("warn")) {
+                        TLogService.updateLogLevel(TLogLevel.WARN);
+                    } else if (level.equals("error")) {
+                        TLogService.updateLogLevel(TLogLevel.ERROR);
+                    }
+                }
+            });
         }
         return ret;
     }

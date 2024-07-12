@@ -10,6 +10,9 @@
 #import "AliyunInit.h"
 #import "AliyunRemoteLog.h"
 #import "AliyunMobileAnalytics.h"
+// 远程日志
+#import <AlicloudTLog/AlicloudTlogProvider.h>
+#import <TRemoteDebugger/TRDManagerService.h>
 
 @implementation AliyunEMAS
 
@@ -125,6 +128,25 @@
     NSString *title = [command.arguments objectAtIndex:0];
     NSString *message = [command.arguments objectAtIndex:1];
     [[AliyunRemoteLog shareInstance]debugWithTitle:title message:message];
+}
+
+/// 上传日志
+- (void)uploadLog:(CDVInvokedUrlCommand *)command {
+    NSString *comment = [command.arguments objectAtIndex:0];
+    [AlicloudTlogProvider uploadTLog:comment];
+}
+
+- (void)updateLogLevel:(CDVInvokedUrlCommand *)command {
+    NSString *level = [command.arguments objectAtIndex:0];
+    if ([level isEqualToString:@"debug"]) {
+        [TRDManagerService updateLogLevel:TLogLevelDebug];
+    } else if ([level isEqualToString:@"info"]) {
+        [TRDManagerService updateLogLevel:TLogLevelInfo];
+    } else if ([level isEqualToString:@"warn"]) {
+        [TRDManagerService updateLogLevel:TLogLevelWarn];
+    } else if ([level isEqualToString:@"error"]) {
+        [TRDManagerService updateLogLevel:TLogLevelError];
+    }
 }
 
 #pragma mark - 移动数据分析

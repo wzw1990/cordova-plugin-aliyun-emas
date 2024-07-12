@@ -99,6 +99,19 @@ var AliyunEMAS = {
         const arr = [title, msg];
         exec(null, null, 'AliyunEMAS', 'info', arr);
     },
+    /**
+     * @brief 手动上传日志
+     */
+    uploadLog: function(comment) {
+        exec(null, null, 'AliyunEMAS', 'uploadLog', [comment]);
+    },
+    updateLogLevel: function (level) {
+        if (!level || !['info', 'debug', 'warn', 'error'].includes(level)){
+            console.log('参数错误，日志级别只能是debug、info、warn、error');
+            return;
+        }
+        exec(null, null, 'AliyunEMAS', 'updateLogLevel', [level]);
+    },
 
     //////////////// 移动数据分析 ////////////////////
     // --------------------------------------------

@@ -70,6 +70,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// debug
 - (void)debug:(CDVInvokedUrlCommand *)command;
 
+/// 上传日志
+- (void)uploadLog:(CDVInvokedUrlCommand *)command;
+
+- (void)updateLogLevel:(CDVInvokedUrlCommand *)command;
+
 #pragma mark - 移动数据分析
 /**
  @brief 初始化（自动）
