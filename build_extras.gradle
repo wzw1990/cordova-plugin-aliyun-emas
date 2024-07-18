@@ -22,10 +22,5 @@ android {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
     }
-    defaultConfig {
-        ndk {
-            abiFilters 'armeabi-v7a','armeabi','x86_64','x86'
-        }
-    }
 }
 
